@@ -1,0 +1,26 @@
+.pivorunas-frames {
+	margin: 12px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.pivorunas-frames li {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin: 0 0 8px;
+}
+
+.pivorunas-frames img {
+	width: 72px;
+	height: 72px;
+	object-fit: cover;
+	background: #f0f0f0;
+}
+
+.pivorunas-home-field img {
+	display: block;
+	max-width: 280px;
+	height: auto;
+	margin-bottom: 8px;
+}

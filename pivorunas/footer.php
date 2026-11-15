@@ -1,5 +1,14 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) { exit; }
-wp_footer();
+/**
+ * Document end.
+ *
+ * @package Pivorunas
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
-</body></html>
+<?php wp_footer(); ?>
+</body>
+</html>
