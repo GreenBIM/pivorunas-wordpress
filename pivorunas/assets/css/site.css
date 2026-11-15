@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:wght@300&family=Inter:wght@500;600;700&family=Noto+Sans:wght@400&display=swap");
+
+:root {
+	--font-sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--color-paper: #ffffff;
+	--color-ink: #111111;
+	--color-name: #a7a7a7;
+	--color-quiet: #8f8f8f;
+	--color-active: #7f7f7f;
+	--color-arrow: #8d7349;
+	--color-link: #1d4f91;
+	--text-index: 0.8125rem;
+	--tracking-nav: 0.045em;
+}
+
+* { box-sizing: border-box; }
+html { font-size: 140%; }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); font-weight: 500; }
+img, video { max-width: 100%; }
+a { color: inherit; }
+.title { margin: 0; font-size: 1.25rem; font-weight: 700; line-height: 1; letter-spacing: -0.02em; text-transform: uppercase; }
+@media (min-width: 768px) { .title { font-size: 1.5rem; } }
+.body { font-size: 0.625rem; font-weight: 500; line-height: 1.625; }
+.body a, .page-copy a { color: var(--color-link); }
+.page-copy { max-width: 64rem; margin-top: 1.5rem; }
+.menu { font-size: 0.8125rem; font-weight: 600; line-height: 1; letter-spacing: var(--tracking-nav); text-transform: uppercase; text-decoration: none; color: var(--color-ink); }
+.menu.on-photo { color: #fff; }
+.menu.is-active { color: var(--color-active); }
+.menu-side { display: block; font-size: var(--text-index); font-weight: 600; line-height: 1.28; letter-spacing: 0.012em; text-transform: uppercase; text-decoration: none; color: var(--color-ink); }
+.menu-side.is-active { color: var(--color-quiet); }
+.name { font-size: 60px; line-height: 1; letter-spacing: 0.06em; white-space: nowrap; text-decoration: none; color: var(--color-name); }
+.name.on-photo { color: #fff; }
+@media (min-width: 768px) { .name { font-size: 68px; } }
+.font-name-noto { font-family: "Noto Sans", sans-serif; font-weight: 400; }
+.font-name-ancizar { font-family: "Ancizar Sans", sans-serif; font-weight: 300; vertical-align: 0.1025em; }
+.site-header, .home-bar { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 0.75rem 2rem; padding: 1.25rem 1.25rem 0; }
+.site-nav { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.5rem 1.25rem; }
+@media (min-width: 768px) { .site-header { flex-wrap: nowrap; padding: 1.75rem 2rem 0; } .site-nav { flex-wrap: nowrap; gap: 0 2.25rem; } }
+.sheet { padding: 2rem 1.25rem 4rem; }
+.home { position: relative; min-height: 100svh; }
+.home-photo { position: absolute; inset: 0; }
+@media (min-width: 768px) { .home-photo { right: auto; width: 56.5%; } .sheet { padding: 3rem 2rem 4rem; } }
+.home-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.6s; }
+.home-photo img.is-on { opacity: 1; }
+.home-bar { position: relative; z-index: 1; }
+.home-bar-wide { display: none; }
+@media (min-width: 768px) { .home-bar-small { display: none; } .home-bar-wide { display: grid; grid-template-columns: 56.5% minmax(0, 1fr); padding: 1.75rem 0 0; } .home-left { display: flex; align-items: flex-start; justify-content: space-between; padding: 0 1.5rem 0 2rem; } }
+.archive-grid { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+@media (min-width: 768px) { .archive-grid { grid-template-columns: max-content minmax(0, 1fr); gap: 2.5rem; } .stage { height: calc(100svh - 10.5rem); min-height: 22rem; } }
+.side-index { margin: 0; padding: 0; list-style: none; }
+.stage { position: relative; min-height: 46vh; background: #f4f4f4; }
+.preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.frame-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; }
+.frame-thumb { display: block; aspect-ratio: 1; overflow: hidden; }
+.frame-thumb img, .plate img, .player img, .player video { width: 100%; height: 100%; object-fit: cover; }
+.viewer-row { display: flex; align-items: center; gap: 1rem; }
+.plate-slot { container-type: size; display: grid; flex: 1; place-items: center; height: min(68vh, 740px); }
+.plate { width: min(100cqw, calc(100cqh * var(--ar))); height: min(100cqh, calc(100cqw / var(--ar))); }
+.frame-caption { text-align: right; text-transform: uppercase; font-weight: 600; }
+.player { background: #111; overflow: hidden; position: relative; }
+.books { list-style: none; padding: 0; text-transform: uppercase; }
+.books li { display: grid; grid-template-columns: 11.5ch auto; gap: 1.5rem; }
